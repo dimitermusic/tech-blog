@@ -1,26 +1,24 @@
 const User = require("./User")
-const Post = require("./LaCroix")
-const Comment = require("./Review")
+const Post = require("./Post")
+const Comment = require("./Comment")
 
-User.hasMany(Comment,{
-    onDelete:"CASCADE"
+User.hasMany(Comment, {
+    onDelete: "CASCADE"
 });
-customElements.belongsTo(User);
 
 Post.hasMany(Comment, {
-    onDelete:"CASCADE"
+    onDelete: "CASCADE"
 });
+
 Comment.belongsTo(User);
 
-User.belongsToMany(Post,{
-    as:"favorite",
-    through:"UserPost"
-})
-Post.belongsToMany(User,{
-    through:"UserPost"
+User.belongsToMany(Post, {
+    through: "UserPost"
 })
 
-module.exports ={
+Post.belongsTo(User)
+
+module.exports = {
     User,
     Post,
     Comment

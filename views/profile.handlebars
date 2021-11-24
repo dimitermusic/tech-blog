@@ -1,0 +1,10 @@
+<h1 class="pageHeader">{{username}}</h1>
+<h2 class="pageHeader">Comments!</h2>
+<div class="cardContainer">
+    {{#each Comments}}
+    <div class="card">
+        <h3>{{Post.comment}}</h3>
+        <p>{{comment}}</p>
+    </div>
+    {{/each}}
+</div>

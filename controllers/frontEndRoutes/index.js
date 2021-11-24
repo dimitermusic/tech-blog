@@ -6,19 +6,19 @@ router.get('/', (req, res) => {
     return res.render("home")
 })
 
-router.get("/flavors", (req, res) => {
+router.get("/posts", (req, res) => {
     Post.findAll().then(PostData => {
         console.log(PostData)
         console.log("=================")
         const hbsLCData = PostData.map(item => item.get({ plain: true }))
         console.log(hbsLCData)
-        return res.render("flavors/index", {
+        return res.render("posts/index", {
             flavors: hbsLCData
         })
     })
 })
 
-router.get("/flavors/:id", (req, res) => {
+router.get("/posts/:id", (req, res) => {
     Post.findByPk(req.params.id, {
         include: [{
             model: Comment,
@@ -27,7 +27,7 @@ router.get("/flavors/:id", (req, res) => {
     }).then(PostData => {
         const hbsData = PostData.get({ plain: true })
         console.log(hbsData);
-        res.render("flavors/single", hbsData);
+        res.render("posts/single", hbsData);
     })
 })
 router.get("/profile/:id", (req, res) => {
@@ -56,8 +56,8 @@ router.get("/comments/add/:id", (req, res) => {
     if (!req.session.user) {
         return res.redirect(`/login`)
     }
-    Post.findByPk(req.params.id).then(singleFlav => {
-        const hbsData = singleFlav.get({ plain: true })
+    Post.findByPk(req.params.id).then(singlePost => {
+        const hbsData = singlePost.get({ plain: true })
         console.log(hbsData);
         res.render("comments/add", hbsData)
     })

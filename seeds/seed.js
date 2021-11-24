@@ -1,18 +1,17 @@
 const sequelize = require("../config/connection")
-const {LaCroix,User,Review} = require("../models")
-const lacroixData = require("./laCroix.json")
+const { Post, User, Comment } = require("../models")
+const postData = require("./post.json")
 const userData = require("./user.json")
-const reviewData = require("./review.json")
+const commentData = require("./comment.json")
 
-const seedMe = async ()=>{
-    await sequelize.sync({force:true});
-    const flavors = await LaCroix.bulkCreate(lacroixData);
-    console.log('seeded flavors!')
-    const users = await User.bulkCreate(userData,{individualHooks:true});
+const seedMe = async () => {
+    await sequelize.sync({ force: false });
+    await Post.bulkCreate(postData);
+    console.log('seeded text!')
+    await User.bulkCreate(userData, { individualHooks: true });
     console.log('seeded users!')
-   
-    await Review.bulkCreate(reviewData);
-    console.log('seeded reviews!')
+    await Comment.bulkCreate(commentData);
+    console.log('seeded comments!')
     process.exit(0);
 }
 

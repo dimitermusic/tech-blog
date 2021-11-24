@@ -4,9 +4,11 @@
   "description": "## Your Task",
   "main": "index.js",
   "scripts": {
+    "seed": "node seeds/seed.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "watch": "nodemon server.js"
+
   },
   "repository": {
     "type": "git",

@@ -26,7 +26,7 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
     Post.create({
-        text: req.body.text,
+        post_text: req.body.post_text,
     }).then(newPost => {
         res.json(newPost)
     }).catch(err => {
@@ -37,7 +37,7 @@ router.post("/", (req, res) => {
 
 router.put("/:id", (req, res) => {
     Post.update({
-        text: req.body.text,
+        post_text: req.body.post_text,
     }, {
         where: {
             id: req.params.id
