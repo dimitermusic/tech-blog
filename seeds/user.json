@@ -1,0 +1,17 @@
+[
+    {
+        "email":"dimiteryyordanov@gmail.com",
+        "username":"dyordanov",
+        "password":"password1"
+    },
+    {
+        "email":"dimitermusic@gmail.com",
+        "username":"dimitermusic",
+        "password":"password2"
+    },
+    {
+        "email":"info@dimitermusic.com",
+        "username":"dimiterofficial",
+        "password":"password3"
+    }
+]
