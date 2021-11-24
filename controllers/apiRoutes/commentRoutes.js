@@ -33,7 +33,7 @@ router.post("/", (req, res) => {
     return res.status(403).json({ err: "You need to be logged in to view comments." });
   }
   Comment.create({
-    comment: req.body.comment,
+    comment_text: req.body.comment,
     UserId: req.session.user.id,
     PostId: req.body.PostId
   })
@@ -58,7 +58,7 @@ router.put("/:id", (req, res) => {
 
       Comment.update(
         {
-          comment: req.body.review,
+          comment_text: req.body.review,
           UserId: req.body.PostId
         },
         {
