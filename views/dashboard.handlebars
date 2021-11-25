@@ -1,6 +1,6 @@
 <div id="title-background">
   <div id="title">
-    <h1>The Tech Blog</h1>
+    <h1>Dashboard</h1>
   </div>
 </div>
 <h2 class="welcome">Welcome {{username}}</h2>
@@ -11,11 +11,15 @@
       <a href="/api/blogs/{{id}}">{{title}}</a>
     </div>
     <div class="created">
-      Created by: {{User.username}} on {{short createdAt}}
+      Created on {{short createdAt}}
     </div>
   </div>
   <div class="card-section">
-    {{body}}
+    {{#each Comments}}
+    <div class="card-section comment">
+      {{username}} wrote: {{body}} on {{short createdAt}}
+    </div>
+    {{/each}}
   </div>
 </div>
 {{/each}}

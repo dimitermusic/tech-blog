@@ -1,0 +1,105 @@
+:root {
+  --darker: #463f3a;
+  --dark: #8a817c;
+  --light: #bcb8b1;
+  --lighter: #f4f3ee;
+  --mid: #e0afa0;
+}
+
+body {
+  background: var(--light);
+}
+
+header {
+  background: var(--darker);
+}
+
+.hide {
+  display: none;
+}
+
+.welcome {
+  text-align: center;
+  color: var(--lighter);
+}
+
+.menu {
+  color: var(--lighter);
+}
+
+.delete {
+  color: var(--lighter);
+  background: var(--darker);
+  padding: 5px;
+  margin: 0;
+}
+
+.update {
+  color: var(--lighter);
+  background: var(--dark);
+  padding: 5px;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.card {
+  width: 75%;
+  margin-left: 12.5%;
+}
+
+.card-divider {
+  display: flex;
+  justify-content: space-between;
+  background: var(--mid);
+}
+
+.card-section {
+  background: var(--light);
+}
+
+.card-title {
+  text-decoration: underline;
+  color: var(--dark);
+  cursor: pointer;
+}
+
+.created {
+  font-size: 0.8rem;
+}
+
+.submit {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.comment {
+  border: 1px solid var(--darker);
+}
+
+.bottom {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
+
+#title-background {
+  width: 100%;
+  position: relative;
+  background: var(--darker);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+#title {
+  position: relative;
+  width: fit-content;
+  color: var(--dark);
+  background: var(--light);
+  padding: 0 10px 0 10px;
+  margin-left: 1%;
+  border-radius: 10px;
+}
+
+#newpost, #newcomment {
+  width: fit-content;
+}

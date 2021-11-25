@@ -1,46 +1,28 @@
-document.querySelector("form#login").addEventListener("submit",(e)=>{
-    e.preventDefault();
-    const fetchObj = {
-        email: document.querySelector("#login-email").value,
-        password: document.querySelector("#login-password").value,
-    }
-    fetch("/api/users/login",{
-        method:"POST",
-        body:JSON.stringify(fetchObj),
-        headers:{
-            "Content-Type":"application/json"
-        }
-    }).then(res=>{
-        if(!res.ok){
-            return alert("baba ganoush!")
-        } else {
-            res.json().then(data=>{
-                location.href = `/profile/${data.id}`
-            })
-        }
-    })
-})
+const loginForm = document.querySelector("#login-form");
 
-document.querySelector("form#signup").addEventListener("submit",(e)=>{
+// Hide new post button
+
+newPost.classList.toggle("hide");
+
+// Send user input from form to user controller to login
+
+loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    const fetchObj = {
-        email: document.querySelector("#signup-email").value,
-        password: document.querySelector("#signup-password").value,
-        username: document.querySelector("#signup-username").value,
+    const userObj = {
+        email: document.querySelector("#email").value,
+        password: document.querySelector("#password").value,
     }
-    fetch("/api/users",{
-        method:"POST",
-        body:JSON.stringify(fetchObj),
-        headers:{
-            "Content-Type":"application/json"
+    fetch("/api/users/login", {
+        method: "POST",
+        body: JSON.stringify(userObj),
+        headers: {
+            "Content-Type": "application/json"
         }
-    }).then(res=>{
-        if(!res.ok){
-            return alert("baba ganoush!")
+    }).then(res => {
+        if (res.ok) {
+            location.href = "/dashboard"
         } else {
-            res.json().then(data=>{
-                location.href = `/profile/${data.id}`
-            })
+            alert("Wrong email and/or password")
         }
     })
 })
