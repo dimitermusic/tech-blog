@@ -60,6 +60,6 @@ const seed = async () => {
     ])
 }
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
     seed();
 })

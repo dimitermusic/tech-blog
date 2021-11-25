@@ -29,15 +29,15 @@
 
 ### Usage
 Sign up and login using bcrypt for encryption and express-sessions for cookies  
-[Signup](./public/assets/screenshots/signup.png)   
+![Signup](./public/assets/screenshots/signup.png)   
 Add a new post if you are logged in  
-[Signup](./public/assets/screenshots/new-post.png)  
+![Signup](./public/assets/screenshots/new-post.png)  
 All user posts will show up here in the dashboard  
-[Signup](./public/assets/screenshots/user-posts.png)  
+![Signup](./public/assets/screenshots/user-posts.png)  
 Home page shows posts from all users  
-[Signup](./public/assets/screenshots/home-page.png)  
+![Signup](./public/assets/screenshots/home-page.png)  
 Comment on posts  
-[Signup](./public/assets/screenshots/comment.png)  
+![Signup](./public/assets/screenshots/comment.png)  
 
 
 ### License
