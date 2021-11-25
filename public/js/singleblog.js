@@ -18,10 +18,10 @@ newPost.classList.toggle("hide");
 // If new comment button is rendered by handlebars then listen for button
 
 if (revealCommentForm) {
-    revealCommentForm.addEventListener('click', () => { commentCard.classList.toggle("hide") });
+    revealCommentForm.addEventListener('click', event => { commentCard.classList.toggle("hide") });
 }
 
-// Send user input from comment form to comment controller
+// Gather info from comment form and send it o comment controller
 
 commentForm.addEventListener('submit', event => {
     event.preventDefault();
@@ -39,12 +39,12 @@ commentForm.addEventListener('submit', event => {
         if (res.ok) {
             location.reload(true);
         } else {
-            alert("missing fields")
+            alert("uh oh, this isn't very descriptive")
         }
     })
 })
 
-// If delete button is rendered, listen for it then send the info to the blog controller
+// If delete button is rendered listen for it then send the info to the blog controller
 
 if (deleteButton) {
     deleteButton.addEventListener('click', event => {
@@ -56,7 +56,7 @@ if (deleteButton) {
                 if (res.ok) {
                     location.href = "/dashboard";
                 } else {
-                    alert("something went wrong")
+                    alert("uh oh, delete didn't go go")
                 }
             })
         }

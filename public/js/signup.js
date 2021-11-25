@@ -4,38 +4,40 @@ const signupForm = document.querySelector("#signup-form");
 
 newPost.classList.toggle("hide");
 
-// Sends user input from form to user controller
+// Gathers form info and sends it to user controller
 
-signupForm.addEventListener("submit",(e)=>{
+signupForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    const userObj={
-        username:document.querySelector("#username").value,
-        password:document.querySelector("#password").value,
-        email:document.querySelector("#email").value,
+    const userObj = {
+        username: document.querySelector("#username").value,
+        password: document.querySelector("#password").value,
+        email: document.querySelector("#email").value,
     }
-    fetch("/api/users",{
-        method:"POST",
-        body:JSON.stringify(userObj),
-        headers:{
-            "Content-Type":"application/json"
+    fetch("/api/users", {
+        method: "POST",
+        body: JSON.stringify(userObj),
+        headers: {
+            "Content-Type": "application/json"
         }
-    }).then(res=>{
-        if(res.ok){
-            const userObj={
-                email:document.querySelector("#email").value,
-                password:document.querySelector("#password").value,
+    }).then(res => {
+        if (res.ok) {
+            const userObj = {
+                email: document.querySelector("#email").value,
+                password: document.querySelector("#password").value,
             }
-            fetch("/api/users/login",{
-                method:"POST",
-                body:JSON.stringify(userObj),
-                headers:{
-                    "Content-Type":"application/json"
+            fetch("/api/users/login", {
+                method: "POST",
+                body: JSON.stringify(userObj),
+                headers: {
+                    "Content-Type": "application/json"
                 }
-            }).then(res=>{
-                if(res.ok){
-                   location.href = "/dashboard"}})
+            }).then(res => {
+                if (res.ok) {
+                    location.href = "/dashboard"
+                }
+            })
         } else {
-            alert("something went wrong...")
+            alert("something went wrong")
         }
     })
 })

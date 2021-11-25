@@ -1,16 +1,12 @@
-<div id="title-background">
-  <div id="title">
-    <h1>The Tech Blog</h1>
-  </div>
-</div>
-<h2 class="welcome">Welcome {{username}}</h2>
 <div class="card">
   <div class="card-divider">
     <div>
       {{#if (owner UserId usernameId)}}
       <button class="button delete">Delete</button>
       {{/if}}
-      {{title}}
+    </div>
+    <div>
+      <h4>{{title}}</h4>
     </div>
     <div class="created">
       Created by:
@@ -41,14 +37,14 @@
     <form id="comment-form">
       <label for="comment">Comment</label>
       <textarea name="comment" id="comment" cols="30" rows="2"></textarea>
-      <button class="submit success button">Submit</button>
+      <button class="submit button">Submit</button>
     </form>
   </div>
 </div>
 <div class="bottom">
   <div>
     {{#if username}}
-    <button id="newcomment" class="submit success button">+ New Comment</button>
+    <button id="newcomment" class="submit button">+ New Comment</button>
     {{/if}}
   </div>
 </div>
@@ -61,9 +57,9 @@
     <div class="card-section">
       <textarea name="title" id="post-title">{{title}}</textarea>
       <textarea name="body" id="post-body">{{body}}</textarea>
-      <button class="submit success button">Update</button>
+      <button class="submit button">Update</button>
     </div>
   </div>
 </form>
 
-<script src="/js/singleblog.js"></script>
+<script src="/js/singleblog.js" defer></script>

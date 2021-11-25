@@ -14,31 +14,41 @@ header {
   background: var(--darker);
 }
 
-.hide {
-  display: none;
-}
-
-.welcome {
-  text-align: center;
+#title {
   color: var(--lighter);
 }
 
-.menu {
+header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+a {
   color: var(--lighter);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--light);
+
 }
 
 .delete {
   color: var(--lighter);
-  background: var(--darker);
+  background: rgb(203, 65, 65);
   padding: 5px;
-  margin: 0;
+  margin: 5px 10px 5px 5px;
 }
 
 .update {
   color: var(--lighter);
   background: var(--dark);
   padding: 5px;
-  border-radius: 10px;
   margin: 0;
 }
 
@@ -49,27 +59,43 @@ header {
 
 .card-divider {
   display: flex;
+  justify-content: flex-start;
   justify-content: space-between;
-  background: var(--mid);
+  align-items: center;
+  background: var(--darker);
+  color: var(--lighter);
+}
+
+.card-divider h4 {
+  justify-content: flex-start;
 }
 
 .card-section {
-  background: var(--light);
+  background: var(--lighter);
 }
 
+
 .card-title {
-  text-decoration: underline;
-  color: var(--dark);
+  text-decoration: none;
+  color: var(--lighter);
   cursor: pointer;
 }
 
 .created {
   font-size: 0.8rem;
+  color: var(--light);
+  justify-self: flex-end;
 }
 
 .submit {
   border-radius: 10px;
   width: 100%;
+  background-color: var(--darker);
+}
+
+.submit:hover {
+  background-color: var(--darker) !important;
+  color: var(--light);
 }
 
 .comment {
@@ -77,29 +103,34 @@ header {
 }
 
 .bottom {
-  justify-content: center;
   display: flex;
+  justify-content: center;
   width: 100%;
 }
 
-#title-background {
-  width: 100%;
-  position: relative;
-  background: var(--darker);
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+.hide {
+  display: none;
 }
 
-#title {
-  position: relative;
-  width: fit-content;
-  color: var(--dark);
-  background: var(--light);
-  padding: 0 10px 0 10px;
-  margin-left: 1%;
-  border-radius: 10px;
+#comment-info {
+  color: purple);
+}
+
+#signup-txt {
+  color: var(--darker);
 }
 
 #newpost, #newcomment {
+  background-color: var(--darker);
   width: fit-content;
+  color: var(--lighter);
 }
+
+#newpost:hover {
+  color: var(--light);
+}
+
+#newcomment:hover {
+  color: var(--light);
+}
+

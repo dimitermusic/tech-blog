@@ -1,9 +1,3 @@
-<div id="title-background">
-  <div id="title">
-    <h1>Dashboard</h1>
-  </div>
-</div>
-<h2 class="welcome">Welcome {{username}}</h2>
 {{#each blogs}}
 <div class="card">
   <div class="card-divider">
@@ -17,7 +11,7 @@
   <div class="card-section">
     {{#each Comments}}
     <div class="card-section comment">
-      {{username}} wrote: {{body}} on {{short createdAt}}
+      <p id="comment-info">{{username}} wrote:</p>{{body}}<p id="comment-info">on {{short createdAt}}</p>
     </div>
     {{/each}}
   </div>
