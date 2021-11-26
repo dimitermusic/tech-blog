@@ -6,9 +6,7 @@
 
 ## Description
 
->
-> Full stack blogging application with MySQL database, Node/Express server, and Handlebars views.
->
+Full stack blogging application with MySQL database, Node/Express server, and Handlebars views.
 
 ## Table of Contents
 - [Tech Blog](#tech-blog)
@@ -24,11 +22,11 @@
 
 ### Installation
 
->
-> Git clone repo onto your machine. In the root folder, open terminal and run npm i to install dependancies. Add a `.env` file and your own enviornment variables. At the db directory level, open terminal and run mysql then `source schema.sql` to create the database. At the root level, run the command `npm run seed` to seed the database with sample entries.
->
+ Git clone repo onto your machine. In the root folder, open terminal and run npm i to install dependancies. Add a `.env` file and your own enviornment variables. At the db directory level, open terminal and run mysql then `source schema.sql` to create the database. At the root level, run the command `npm run seed` to seed the database with sample entries.
 
-### Usage
+
+### Usage  
+
 Sign up and login using bcrypt for encryption and express-sessions for cookies  
 ![Signup](./public/assets/screenshots/signup.png)   
 Add a new post if you are logged in  
@@ -43,35 +41,24 @@ Comment on posts
 
 ### License
 
->
-> This project is using the MIT license.
->
+This project is using the MIT license.
 
 ### Contributing
 
->
-> All contributions and feedback welcome!
->
+All contributions and feedback welcome!
 
 ### Test Instructions
 
->
-> No tests at this time.
-
+No tests at this time.
 
 ### Links
 
->
-> [Deployed Site](https://dimiter-tech-blog.herokuapp.com/)
->
-> [Github](https://github.com/dimitermusic/tech-blog)
->
+[Deployed Site](https://dimiter-tech-blog.herokuapp.com/)  
 
+[Github](https://github.com/dimitermusic/tech-blog)
+s
 ### Questions
 
->
->[Github](https://www.github.com/dimitermusic)
->
->[Email](mailto:dimitermusic@gmail.com)
->
+[Github](https://www.github.com/dimitermusic)
 
+[Email](mailto:dimitermusic@gmail.com)
