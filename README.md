@@ -53,10 +53,10 @@ No tests at this time.
 
 ### Links
 
-[Deployed Site](https://dimiter-tech-blog.herokuapp.com/)  
+[Deployed App](https://dimiter-tech-blog.herokuapp.com/)  
 
-[Github](https://github.com/dimitermusic/tech-blog)
-s
+[Github](https://github.com/dimitermusic/tech-blog)  
+
 ### Questions
 
 [Github](https://www.github.com/dimitermusic)
