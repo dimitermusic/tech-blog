@@ -1,9 +1,8 @@
 :root {
-  --darker: #463f3a;
-  --dark: #8a817c;
-  --light: #bcb8b1;
-  --lighter: #f4f3ee;
-  --mid: #e0afa0;
+  --darker: #252b5e;
+  --light: #e6dddd;
+  --lighter: #ffffff;
+  --mid: #ebae44;
 }
 
 body {
@@ -11,7 +10,7 @@ body {
 }
 
 header {
-  background: var(--darker);
+  background: linear-gradient(to right, var(--darker), #3b4177);
 }
 
 #title {
@@ -38,13 +37,6 @@ a:hover {
 
 }
 
-.delete {
-  color: var(--lighter);
-  background: rgb(203, 65, 65);
-  padding: 5px;
-  margin: 5px 10px 5px 5px;
-}
-
 .update {
   color: var(--lighter);
   background: var(--dark);
@@ -55,6 +47,7 @@ a:hover {
 .card {
   width: 75%;
   margin-left: 12.5%;
+  border: none;
 }
 
 .card-divider {
@@ -87,19 +80,14 @@ a:hover {
   justify-self: flex-end;
 }
 
-.submit {
-  border-radius: 10px;
-  width: 100%;
-  background-color: var(--darker);
-}
-
 .submit:hover {
-  background-color: var(--darker) !important;
-  color: var(--light);
+  background-color: var(--darker);
+  color: var(--lighter);
 }
 
 .comment {
   border: 1px solid var(--darker);
+  margin: 10px;
 }
 
 .bottom {
@@ -113,24 +101,37 @@ a:hover {
 }
 
 #comment-info {
-  color: purple);
+  color: var(--darker);
 }
 
 #signup-txt {
   color: var(--darker);
 }
 
-#newpost, #newcomment {
-  background-color: var(--darker);
+.button {
+  background-color: var(--mid);
+  color: var(--darker);
   width: fit-content;
+}
+
+.button:hover {
+  background-color: var(--darker);
   color: var(--lighter);
 }
 
-#newpost:hover {
-  color: var(--light);
+.button:focus {
+  background-color: var(--mid);
+  color: var(--darker);
 }
 
-#newcomment:hover {
-  color: var(--light);
+#delete {
+  color: var(--lighter);
+  background: rgb(203, 65, 65);
+  padding: 5px;
+  margin: 5px 10px 5px 5px;
 }
 
+#delete:hover {
+  background-color: var(--lighter);
+  color: red;
+}

@@ -2,7 +2,7 @@
   <div class="card-divider">
     <div>
       {{#if (owner UserId usernameId)}}
-      <button class="button delete">Delete</button>
+      <button id="delete" class="button">Delete</button>
       {{/if}}
     </div>
     <div>
@@ -31,8 +31,6 @@
   </div>
 </div>
 <div id="commentcard" class="card hide">
-  <div class="card-divider">
-  </div>
   <div class="card-section">
     <form id="comment-form">
       <label for="comment">Comment</label>

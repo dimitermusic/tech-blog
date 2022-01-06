@@ -1,7 +1,7 @@
 const revealCommentForm = document.querySelector("#newcomment");
 const commentCard = document.querySelector("#commentcard");
 const commentForm = document.querySelector("#comment-form");
-const deleteButton = document.querySelector(".delete");
+const deleteButton = document.querySelector("#delete");
 const updateButton = document.querySelector(".update");
 const updateForm = document.querySelector("#updatepost-form");
 
@@ -62,5 +62,3 @@ if (deleteButton) {
         }
     })
 }
-
-
